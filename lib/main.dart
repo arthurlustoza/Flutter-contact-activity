@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '/theme/app_theme.dart';
 import 'telas/telaLogin.dart';
 
 void main() {
@@ -12,7 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Contatos',
-      theme: ThemeData(colorSchemeSeed: Colors.blue),
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      themeMode: ThemeMode.system,
       home: const TelaLogin(),
     );
   }
